@@ -1953,9 +1953,12 @@
 
             // Save to localStorage
             saveToLocalStorage() {
-                localStorage.setItem('albums', JSON.stringify(this.albums));
-            }
-        }
+                addAlbum({
+  title: albumTitle,
+  artist: albumArtist,
+  cover: albumCoverURL
+});
+
 
         // Music Player Class
         class MusicPlayer {
@@ -3223,27 +3226,7 @@
 
         // Initialize song file input event listener
         document.querySelector('.song-file-input').addEventListener('change', updateSongFilesList);
+   // Import the functions you need from the SDKs you need import { initializeApp } from "firebase/app"; import { getAnalytics } from "firebase/analytics"; // TODO: Add SDKs for Firebase products that you want to use // https://firebase.google.com/docs/web/setup#available-libraries // Your web app's Firebase configuration // For Firebase JS SDK v7.20.0 and later, measurementId is optional const firebaseConfig 
     </script>
-    // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDlXNNMDVh9eN01xMtWuDWoRWApkNDLqO8",
-  authDomain: "tunehub-40d5b.firebaseapp.com",
-  projectId: "tunehub-40d5b",
-  storageBucket: "tunehub-40d5b.firebasestorage.app",
-  messagingSenderId: "529495740237",
-  appId: "1:529495740237:web:edc63a22e14df4557d7104",
-  measurementId: "G-X915TZNST7"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 </body>
 </html>

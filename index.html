@@ -1953,7 +1953,11 @@
 
             // Save to localStorage
             saveToLocalStorage() {
-                localStorage.setItem('albums', JSON.stringify(this.albums));
+                addAlbum({
+  title: albumTitle,
+  artist: albumArtist,
+  cover: albumCoverURL
+});
             }
         }
 
